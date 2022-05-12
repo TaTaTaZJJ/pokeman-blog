@@ -3,12 +3,11 @@
   "packageManager": "pnpm@7.0.0",
   "scripts": {
     "build": "vite-ssg build",
-    "dev": "vite --port 3333 --open",
+    "dev": "vite --open",
     "lint": "eslint .",
     "preview": "vite preview",
     "preview-https": "serve dist",
     "test": "vitest",
-    "test:e2e": "cypress open",
     "test:unit": "vitest",
     "typecheck": "vue-tsc --noEmit"
   },
@@ -33,9 +32,7 @@
     "@vue/test-utils": "^2.0.0-rc.21",
     "critters": "^0.0.16",
     "cross-env": "^7.0.3",
-    "cypress": "^9.6.0",
     "eslint": "^8.14.0",
-    "eslint-plugin-cypress": "^2.12.1",
     "https-localhost": "^4.7.1",
     "markdown-it-link-attributes": "^4.0.0",
     "markdown-it-prism": "^2.2.4",

@@ -5,9 +5,9 @@
 import { isDark } from '~/composables'
 
 useHead({
-  title: 'Vitesse',
+  title: 'Ta之境界的博客',
   meta: [
-    { name: 'description', content: 'Opinionated Vite Starter Template' },
+    { name: 'description', content: '口袋人的制作思路，记录及一些心得' },
     {
       name: 'theme-color',
       content: computed(() => isDark.value ? '#00aba9' : '#ffffff'),
