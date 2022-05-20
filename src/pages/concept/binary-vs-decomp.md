@@ -1,22 +1,22 @@
 ---
-title: 概念篇
+title: 二进制改版和反编译改版的区别
 ---
-# 概念篇
+# 二进制改版和反编译改版的区别
 
 ## 二进制改版 Binary Hack
 这里的二进制文件，是你在掌机磁盘上的游戏数据，也是所谓的ROM(Read Only Memory)文件。
-![Hex Editor](../assets/hex-editor.png)
+![Hex Editor](../../assets/hex-editor.png)
 
 市场上现有的二进制文件是Gf编写代码编译出来的成品，在现代电脑上普遍格式是.gba。掌机/模拟器通过解析这个二进制文件来和你呈现各种被设计好的互动。
 
-<img class="p-4 bg-white" src="../assets/gba.drawio.png"/>
+<img class="p-4 bg-white" src="../../assets/gba.drawio.png"/>
 
 ### 改版方法
 1. 最初是有些大佬通过粗略的反编译及猜测推理，得出一些数据组在二进制文件的位置，使用二进制编辑器对文件进行改动，来实现Mod，普遍用于修改图片，数值，脚本及地图，甚至通过重新指向的方式扩充数据上限。
 2. 后来有大佬开始编写ASM语言(Assembly Language)代码，通过callasm或者hook的方式来实现稍微复杂的改动或者新功能，这方面较多涉及战斗系统和功能扩展。
 3. 接着有人尝试编写C语言代码，并编译成二进制代码后，通过callasm或者hook的方式来实现复杂的改动或者新功能。
 
-<img class="p-4 bg-white" src="../assets/gba-hack.drawio.png"/>
+<img class="p-4 bg-white" src="../../assets/gba-hack.drawio.png"/>
 
 ### 优势
 1. 门槛很低，不需要太深入的编程知识就可以入门。
@@ -42,7 +42,7 @@ title: 概念篇
 ## 反编译改版 Decompilation Hack
 
 上文说的Gf编写的代码，只要有这份代码就可以自行编译想要的内容，当然在现实这是不可能的。有些大佬通过更深入的整理把这个二进制文件的源码一步一步用c语言重新写出来，也就是反编译。这个过程花了很多年才到达今天的地步，也就是因为这个反编译代码才让我们更接近理想,也让我们更加了解游戏所有的结构设计。
-<img class="p-4 bg-white" src="../assets/gba-decomp.drawio.png"/>
+<img class="p-4 bg-white" src="../../assets/gba-decomp.drawio.png"/>
 
 ### 优势
 1. 代码或资源更容易做版本管理。

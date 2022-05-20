@@ -26,3 +26,7 @@ html.dark {
   width: 100%;
   height: 2px;
 }
+
+.link-active {
+  border-bottom: #EA215A 0.125em solid;
+}

@@ -7,8 +7,6 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-md'
-import { VitePWA } from 'vite-plugin-pwa'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Inspector from 'vite-plugin-vue-inspector'
 import Prism from 'markdown-it-prism'
@@ -43,7 +41,6 @@ export default defineConfig({
       imports: [
         'vue',
         'vue-router',
-        'vue-i18n',
         'vue/macros',
         '@vueuse/head',
         '@vueuse/core',
@@ -80,24 +77,6 @@ export default defineConfig({
           },
         })
       },
-    }),
-
-    // https://github.com/antfu/vite-plugin-pwa
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico'],
-      manifest: {
-        name: 'Ta之境界的博客',
-        short_name: 'Ta之境界的博客',
-        theme_color: '#ffffff',
-      },
-    }),
-
-    // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
-    VueI18n({
-      runtimeOnly: true,
-      compositionOnly: true,
-      include: [path.resolve(__dirname, 'locales/**')],
     }),
 
     // https://github.com/antfu/vite-plugin-inspect
