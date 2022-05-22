@@ -5,7 +5,7 @@
 import { isDark } from '~/composables'
 
 useHead({
-  title: 'Ta之境界的博客',
+  title: '口袋人',
   meta: [
     { name: 'description', content: '口袋人的制作思路，记录及一些心得' },
     {

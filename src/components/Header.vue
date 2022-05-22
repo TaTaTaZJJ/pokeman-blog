@@ -1,21 +1,19 @@
+<script lang="ts" setup>
+defineProps<{
+  title: string
+  routes: { title: string; route: string }[]
+}>()
+</script>
+
 <template>
   <nav>
     <div class="prose flex flex-wrap justify-between item-center mx-auto">
       <h1>
-        Ta之境界的技术博客
+        {{ title }}
       </h1>
       <div class="flex justify-between item-center">
-        <router-link to="/">
-          主页
-        </router-link>
-        <router-link to="/concept">
-          概念
-        </router-link>
-        <router-link to="/getting-started">
-          入门
-        </router-link>
-        <router-link to="/tutorial">
-          教学
+        <router-link v-for="{ route, title: name } in routes" :key="route" :to="route">
+          {{ name }}
         </router-link>
       </div>
     </div>
