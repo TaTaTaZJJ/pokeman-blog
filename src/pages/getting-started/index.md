@@ -8,3 +8,4 @@ title: 入门篇索引
 
 1. [准备](/getting-started/preparation)
 2. [安装](/getting-started/installation)
+2. [VSCode插件和设置](/getting-started/vscode)
